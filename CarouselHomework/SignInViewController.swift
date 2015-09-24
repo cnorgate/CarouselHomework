@@ -10,6 +10,29 @@ import UIKit
 
 class SignInViewController: UIViewController {
 
+    var signInOriginalPosition : CGFloat!
+    var emailPassOriginalPosition :CGFloat!
+    
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    
+    @IBOutlet weak var emailForm: UITextField!
+    
+    @IBOutlet weak var pwForm: UITextField!
+    
+    
+    @IBOutlet weak var signInButton: UIButton!
+    
+    @IBOutlet weak var signInGroup: UIView!
+
+    @IBOutlet weak var carouselText: UIImageView!
+    
+    @IBOutlet weak var emailPassGroup: UIView!
+    
+    @IBOutlet weak var signInNavBar: UIImageView!
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -19,6 +42,71 @@ class SignInViewController: UIViewController {
         //http://stackoverflow.com/questions/24126678/close-ios-keyboard-by-touching-anywhere-using-swift
         let tap = UITapGestureRecognizer(target: self, action: "DismissKeyboard")
         view.addGestureRecognizer(tap)
+        
+        // Code to register the keyboard being shown or hidden
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillShow:", name: UIKeyboardWillShowNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillHide:", name: UIKeyboardWillHideNotification, object: nil)
+        
+        //Code to get the original y position of the buttons
+        signInOriginalPosition = signInGroup.center.y
+        emailPassOriginalPosition = emailPassGroup.center.y
+        
+        
+    }
+    
+
+    
+    func keyboardWillShow(notification: NSNotification!) {
+
+        // GIST CODE
+        var userInfo = notification.userInfo!
+        
+        // Get the keyboard height and width from the notification
+        // Size varies depending on OS, language, orientation
+        var kbSize = (userInfo[UIKeyboardFrameEndUserInfoKey] as! NSValue).CGRectValue().size
+        var durationValue = userInfo[UIKeyboardAnimationDurationUserInfoKey] as! NSNumber
+        var animationDuration = durationValue.doubleValue
+        var curveValue = userInfo[UIKeyboardAnimationCurveUserInfoKey] as! NSNumber
+        var animationCurve = curveValue.integerValue
+        
+        UIView.animateWithDuration(animationDuration, delay: 0.0, options: UIViewAnimationOptions(rawValue: UInt(animationCurve << 16)), animations: {
+            
+            // Set view properties in here that you want to match with the animation of the keyboard
+            // If you need it, you can use the kbSize property above to get the keyboard width and height.
+            }, completion: nil)
+        
+        
+        
+        carouselText.alpha = 0
+        signInGroup.center.y = view.frame.height - kbSize.height - signInGroup.frame.height + 20
+        emailPassGroup.center.y = 120
+    }
+    
+    func keyboardWillHide(notification: NSNotification!) {
+
+        //GIST CODE
+        var userInfo = notification.userInfo!
+        
+        // Get the keyboard height and width from the notification
+        // Size varies depending on OS, language, orientation
+        var kbSize = (userInfo[UIKeyboardFrameEndUserInfoKey] as! NSValue).CGRectValue().size
+        var durationValue = userInfo[UIKeyboardAnimationDurationUserInfoKey] as! NSNumber
+        var animationDuration = durationValue.doubleValue
+        var curveValue = userInfo[UIKeyboardAnimationCurveUserInfoKey] as! NSNumber
+        var animationCurve = curveValue.integerValue
+        
+        UIView.animateWithDuration(animationDuration, delay: 0.0, options: UIViewAnimationOptions(rawValue: UInt(animationCurve << 16)), animations: {
+            
+            // Set view properties in here that you want to match with the animation of the keyboard
+            // If you need it, you can use the kbSize property above to get the keyboard width and height.
+            }, completion: nil)
+        
+        
+        
+        
+        signInGroup.center.y = signInOriginalPosition
+        emailPassGroup.center.y = emailPassOriginalPosition
+        carouselText.alpha = 1
     }
     
     func DismissKeyboard(){
@@ -26,11 +114,7 @@ class SignInViewController: UIViewController {
         view.endEditing(true)
     }
     
-    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
 
-    @IBOutlet weak var emailForm: UITextField!
-
-    @IBOutlet weak var pwForm: UITextField!
     
     @IBAction func signInClick(sender: AnyObject) {
 
@@ -78,9 +162,10 @@ class SignInViewController: UIViewController {
         }
     }
     
-    @IBAction func backToMain(sender: AnyObject) {
-        navigationController!.popViewControllerAnimated(true)
+    
+    @IBAction func backToMain(sender: AnyObject) {        navigationController!.popViewControllerAnimated(true)
     }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

@@ -16,6 +16,7 @@
 		97ADCF311BB2348A0083270C /* CarouselHomeworkUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97ADCF301BB2348A0083270C /* CarouselHomeworkUITests.swift */; };
 		97ADCF3F1BB235BE0083270C /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97ADCF3E1BB235BE0083270C /* Common.swift */; settings = {ASSET_TAGS = (); }; };
 		97ADCF411BB238310083270C /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97ADCF401BB238310083270C /* IntroViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		97ADCF821BB24C0C0083270C /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97ADCF811BB24C0C0083270C /* SignInViewController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		97ADCF321BB2348A0083270C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		97ADCF3E1BB235BE0083270C /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		97ADCF401BB238310083270C /* IntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
+		97ADCF811BB24C0C0083270C /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 				97ADCF101BB2348A0083270C /* AppDelegate.swift */,
 				97ADCF121BB2348A0083270C /* ViewController.swift */,
 				97ADCF141BB2348A0083270C /* Main.storyboard */,
+				97ADCF811BB24C0C0083270C /* SignInViewController.swift */,
 				97ADCF171BB2348A0083270C /* Assets.xcassets */,
 				97ADCF191BB2348A0083270C /* LaunchScreen.storyboard */,
 				97ADCF3E1BB235BE0083270C /* Common.swift */,
@@ -275,6 +278,7 @@
 				97ADCF131BB2348A0083270C /* ViewController.swift in Sources */,
 				97ADCF3F1BB235BE0083270C /* Common.swift in Sources */,
 				97ADCF111BB2348A0083270C /* AppDelegate.swift in Sources */,
+				97ADCF821BB24C0C0083270C /* SignInViewController.swift in Sources */,
 				97ADCF411BB238310083270C /* IntroViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

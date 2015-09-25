@@ -133,7 +133,7 @@ class SignInViewController: UIViewController {
             presentViewController(alertController, animated: true) {
                 // optional code for what happens after the alert controller has finished presenting
             }
-        } else if (self.emailForm.text == "c@") && (self.pwForm.text == "pass") {
+        } else if (self.emailForm.text == "c") && (self.pwForm.text == "p") {
             self.activityIndicator.startAnimating()
             delay(2) {
                 //print("success")
@@ -163,7 +163,8 @@ class SignInViewController: UIViewController {
     }
     
     
-    @IBAction func backToMain(sender: AnyObject) {        navigationController!.popViewControllerAnimated(true)
+    @IBAction func backToMain(sender: AnyObject) {
+        navigationController!.popViewControllerAnimated(true)
     }
     
     

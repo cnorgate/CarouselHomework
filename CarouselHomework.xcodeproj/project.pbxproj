@@ -18,6 +18,9 @@
 		97ADCF411BB238310083270C /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97ADCF401BB238310083270C /* IntroViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		97ADCF821BB24C0C0083270C /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97ADCF811BB24C0C0083270C /* SignInViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		97ADCF841BB48C130083270C /* scrollingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97ADCF831BB48C130083270C /* scrollingPageViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		97ADCF861BB4BE380083270C /* feedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97ADCF851BB4BE380083270C /* feedViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		97ADCF881BB4BF970083270C /* conversationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97ADCF871BB4BF970083270C /* conversationsViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		97ADCF8A1BB4C9A30083270C /* settingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97ADCF891BB4C9A30083270C /* settingsViewController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +58,9 @@
 		97ADCF401BB238310083270C /* IntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
 		97ADCF811BB24C0C0083270C /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		97ADCF831BB48C130083270C /* scrollingPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = scrollingPageViewController.swift; sourceTree = "<group>"; };
+		97ADCF851BB4BE380083270C /* feedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = feedViewController.swift; path = ../feedViewController.swift; sourceTree = "<group>"; };
+		97ADCF871BB4BF970083270C /* conversationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = conversationsViewController.swift; sourceTree = "<group>"; };
+		97ADCF891BB4C9A30083270C /* settingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = settingsViewController.swift; path = ../settingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,8 +145,11 @@
 		97ADCF421BB238360083270C /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				97ADCF891BB4C9A30083270C /* settingsViewController.swift */,
+				97ADCF851BB4BE380083270C /* feedViewController.swift */,
 				97ADCF401BB238310083270C /* IntroViewController.swift */,
 				97ADCF831BB48C130083270C /* scrollingPageViewController.swift */,
+				97ADCF871BB4BF970083270C /* conversationsViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -279,7 +288,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				97ADCF131BB2348A0083270C /* ViewController.swift in Sources */,
+				97ADCF861BB4BE380083270C /* feedViewController.swift in Sources */,
+				97ADCF8A1BB4C9A30083270C /* settingsViewController.swift in Sources */,
 				97ADCF3F1BB235BE0083270C /* Common.swift in Sources */,
+				97ADCF881BB4BF970083270C /* conversationsViewController.swift in Sources */,
 				97ADCF111BB2348A0083270C /* AppDelegate.swift in Sources */,
 				97ADCF841BB48C130083270C /* scrollingPageViewController.swift in Sources */,
 				97ADCF821BB24C0C0083270C /* SignInViewController.swift in Sources */,

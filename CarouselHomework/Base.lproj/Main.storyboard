@@ -21,27 +21,15 @@
                                         <autoresizingMask key="autoresizingMask"/>
                                     </imageView>
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="intro_tile2" id="qAX-Ke-nhB">
-                                        <rect key="frame" x="202" y="741" width="76" height="75"/>
+                                        <rect key="frame" x="202" y="326" width="76" height="75"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                     </imageView>
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="intro_tile1" id="kGf-2H-4ly">
-                                        <rect key="frame" x="46" y="741" width="153" height="152"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                    </imageView>
-                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="intro_tile3" id="tRU-fP-tp3">
-                                        <rect key="frame" x="202" y="818" width="76" height="76"/>
+                                        <rect key="frame" x="48" y="327" width="153" height="152"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                     </imageView>
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="intro_tile4" id="mGe-cT-w3R">
-                                        <rect key="frame" x="48" y="896" width="76" height="76"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                    </imageView>
-                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="intro_tile5" id="QrR-qt-qBi">
-                                        <rect key="frame" x="125" y="897" width="76" height="75"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                    </imageView>
-                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="intro_tile6" id="wrY-zr-4Yz">
-                                        <rect key="frame" x="202" y="897" width="76" height="75"/>
+                                        <rect key="frame" x="48" y="482" width="76" height="76"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Zsg-LG-NoG">
@@ -51,6 +39,18 @@
                                             <segue destination="6TL-Yh-muD" kind="push" id="H73-mM-IDB"/>
                                         </connections>
                                     </button>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="intro_tile3" id="tRU-fP-tp3">
+                                        <rect key="frame" x="202" y="404" width="76" height="76"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </imageView>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="intro_tile5" id="QrR-qt-qBi">
+                                        <rect key="frame" x="125" y="483" width="76" height="75"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </imageView>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="intro_tile6" id="wrY-zr-4Yz">
+                                        <rect key="frame" x="202" y="483" width="76" height="75"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </imageView>
                                 </subviews>
                             </scrollView>
                         </subviews>
@@ -60,6 +60,12 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="1136"/>
                     <connections>
+                        <outlet property="image1" destination="kGf-2H-4ly" id="pKh-lg-1Ij"/>
+                        <outlet property="image2" destination="mGe-cT-w3R" id="yHg-KZ-cDK"/>
+                        <outlet property="image3" destination="QrR-qt-qBi" id="AAu-Om-24J"/>
+                        <outlet property="image4" destination="wrY-zr-4Yz" id="kyt-zq-z7O"/>
+                        <outlet property="image5" destination="tRU-fP-tp3" id="DHe-qY-kMf"/>
+                        <outlet property="image6" destination="qAX-Ke-nhB" id="b2Q-mV-qGz"/>
                         <outlet property="imageView" destination="kf5-BK-CpQ" id="Q7l-zc-Wy5"/>
                         <outlet property="scrollView" destination="wsI-rH-glZ" id="u2o-pY-O3O"/>
                     </connections>
